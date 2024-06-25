@@ -62,8 +62,8 @@ body{
 }
 
 .navbar li a:hover{
-    transition-duration: 1.2s;
-    background-color: black;
+    transition-duration: 0.8s;
+    background-color: rgba(0,0,0,0.4);
     color: white;
 }
 
