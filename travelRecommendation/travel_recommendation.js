@@ -1,4 +1,7 @@
-fetch('/travel_recommendation_api.json')
-.then(response =>console.log(response))
-.catch(error => console.error(error));
+let btnReset = document.querySelector('button');
+let input = document.querySelector('input');
+
+btnReset.addEventListener('click', () =>{
+    input.forEach(input => input.value = '');
+});
 
