@@ -1,0 +1,56 @@
+header{
+    display: flex;
+    
+}
+
+.navbar{
+    background-color: green;
+    display: flex;
+    list-style: none;
+    width:fit-content; 
+}
+
+.navbar li{
+    background-color: rgb(255, 0, 0);
+    margin: 15px;
+    padding: 5px;
+}
+
+.navbar li a{
+    text-decoration: none;
+    padding-right: 10px;
+    background-color: aliceblue;
+    color: black;
+    float: left;
+    margin: 5px;
+
+}
+
+.navbar li a:hover{
+    transition-duration: 1.2s;
+    background-color: black;
+    color: white;
+}
+
+.searchBar{
+    background-color: blanchedalmond;
+    display: flex;
+    list-style-type: none;
+    margin: 10px;
+    align-items: center;
+}
+.searchBar .bar_one{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    width:180px;
+}
+
+.searchBar button{
+    background-color: black;
+    color: aliceblue;
+    margin: 10px 10px;
+    padding: 5px 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}

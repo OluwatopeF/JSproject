@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "travel.css">
     <title>Travel Recommendation</title>
 </head>
 <body>
-    <nav>
-        <a href = "#">Home</a>
-        <a href = "#">About us</a>
-        <a href = "#">Contact Us</a>
-        
+    <header>
+    <nav class = "navbar">
+        <li><h1>Travel</h1></li>
+        <li><a href = "#">Home</a></li>
+        <li><a href = "#">About us</a></li>
+        <li><a href = "#">Contact Us</a></li>   
     </nav>
-
+    <div class = "searchBar">
+        <li><input type="text" id="conditionInput" class = "bar_one" placeholder="Enter a destination or keyword"> </li>
+        <li><button id = "btnSearch">Search</button></li>
+        <li><button id = "btnReset">Reset</button></li>
+    </div>  
+</header>
+    <script src = "./travel_recommendation.js"></script>
 </body>
 </html>
