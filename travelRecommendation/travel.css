@@ -1,3 +1,8 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
 header{
     display: flex;
     
@@ -12,7 +17,7 @@ body{
     background-color: green;
     display: flex;
     list-style: none;
-    width:75%; 
+    width:500px; 
 }
 
 .navbar li{
@@ -43,7 +48,11 @@ body{
     list-style-type: none;
     margin: 10px;
     align-items: center;
+    position: absolute;
+    right: 0;
+    width: 400px;
 }
+
 .searchBar .bar_one{
     padding: 10px;
     margin: 10px;
@@ -68,31 +77,54 @@ body{
 /* social bar */
 .sideSocial{
     background-color: orange;
-    width:120px;
-    height: 120px;
+    width:36px;
+    height: 160px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: column;
-
+    margin-top: 25px;
 }
 
 .sideSocial-fb{
-    width: 50px;
-    height:30px;
-    background-color: blue;
-    background-image: url();
+    width: 35px;
+    height: 35px;
+    background-image: url("./img/logo-facebook-png-46264.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
+.sideSocial-tw{
+    width: 35px;
+    height: 35px;
+    background-image: url("./img/twitter-icon-83.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sideSocial-ig{
+    width: 35px;
+    height: 35px;
+    background-image: url("./img/instagram-icon-971.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sideSocial-yt{
+    width: 35px;
+    height: 35px;
+    background-image: url("./img/youtube-logo-png-3566.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 
 .mainTitle{
     background-color: red;
     display: block;
-    width:200px;
+    width:300px;
     height: fit-content;
     position: relative;
-    left: 80px;
+    left: 163px;
 }
 .mainTitle h1{
     font-size: 50px;
