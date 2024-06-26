@@ -36,6 +36,7 @@ header{
 body{
     background:url(./img/1431632.jpg);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 
@@ -68,25 +69,16 @@ body{
 }
 
 /* searchbar */
-
-.searchBar{
-    display: flex;
-    list-style-type: none;
-    margin: 10px;
-    align-items: center;
-    position: absolute;
-    right: 0;
-    width: 400px;
-}
-
-.searchBar .bar_one{
+.navbar .bar_one{
     padding: 10px;
     margin: 10px;
     border-radius: 20px;
-    width: 210px;
+    width: 350px;
+    position: relative;
+    left: 440px;
 }
 
-.searchBar button{
+.navbar button{
     background-color: black;
     color: aliceblue;
     margin: 10px 10px;
@@ -94,6 +86,19 @@ body{
     cursor: pointer;
     border-radius: 10px;
     text-align: center;
+    position: relative;
+    top: 4px;
+    left: 310px;
+    display: flex;
+}
+
+.results{
+    display: block;
+    background-color: aqua;
+    width: 360px;
+    position: absolute;
+    right: 185px;
+    top: 75px;
 }
 
 /* section */
@@ -168,5 +173,23 @@ body{
 
 /* About Us */
 .aboutUs{
-    background-color: black;
+    background-color: rgb(128, 128, 128, 0.3);
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 208px;
+    display: flex;
+}
+
+/* contact us */
+.contactUs{
+
+    width: 500px;
+    display: flex;
+    background-color: rgba(0, 255, 255, 0.3);
+
+    position: relative;
+    left: 675px;
+    height: 308px;
+    
 }
