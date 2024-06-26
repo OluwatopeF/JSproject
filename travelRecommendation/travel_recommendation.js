@@ -1,25 +1,39 @@
 // search countries
 function searchCountry(){
-    const input = document.getElementById('searchCountries').ValueM.toLowerCase();
-    const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = "";
+    // const query = document.getElementById('searchCountries').value;
+    
+    // const resultsDiv = document.getElementById('results');
+    // let resultsFound = false;
 
-    fetch('travel_recommendation.json')
-    .then(response => response.json())
-    .then(data => {
-        const country = data.conditions.find(item => item.name.toLowerCase() === input);
-        resultDiv.innerHTML = '<h1> ${data.countries}</h1>';
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        resultDiv.innerHTML = 'You have an error.';
+    fetch("travel_recommendation_api.json")
+        .then(res => {
+            // parse as json then covert to normal JS
+            return res.json();
+        })
+        .then(res => {
+            // parse as json then covert to normal JS
+            // return res.json();
+            const data = res.countries;
+            let x = '';
+            data.forEach(countries => {
+                x += "<li>${countries.id}<li>"
+            })
+            document.getElementById('results').innerHTML = x;
+        })
+        // .then(data => {
+            // Output data in normal JS format
+        //     console.log(data);
+        // })
+        
+        // error handling
+        .catch(error => {
+            console.error('Error:', error);
     });
 }
 
 // reset input
 function resetSearch(){
-    document.getElementById("searchCountries") ="";
+    const searchCountries= document.getElementById("searchCountries");
+
+    searchCountries.valueOf="";
 }
-
-
-clear.addEventListener('click', resetSearch);
