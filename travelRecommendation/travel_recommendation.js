@@ -1,39 +1,94 @@
-// search countries
-function searchCountry(){
-    // const query = document.getElementById('searchCountries').value;
-    
-    // const resultsDiv = document.getElementById('results');
-    // let resultsFound = false;
+let travelData = {};
 
-    fetch("travel_recommendation_api.json")
-        .then(res => {
-            // parse as json then covert to normal JS
-            return res.json();
-        })
-        .then(res => {
-            // parse as json then covert to normal JS
-            // return res.json();
-            const data = res.countries;
-            let x = '';
-            data.forEach(countries => {
-                x += "<li>${countries.id}<li>"
-            })
-            document.getElementById('results').innerHTML = x;
-        })
-        // .then(data => {
-            // Output data in normal JS format
-        //     console.log(data);
-        // })
+  fetch('./travel_recommendation_api.json')
+    .then(res => {
         
-        // error handling
-        .catch(error => {
-            console.error('Error:', error);
+        if (!res.ok) {
+            throw new Error('response not ok' + res.statusText);
+        }
+        return res.json();
+    })
+    .then(data => {
+        travelData =data;
+        console.log('Fetched Data: ', travelData);
+    })
+    .catch(error => console.error('Error: ', error));
+
+
+function displayContainer(bar){
+    const resultsContainer = document.getElementById('results').querySelector('ul');
+    resultsContainer.innerHTML = '';
+
+    bar.forEach(item => {
+        const itemContainer = document.createElement('li');
+        itemContainer.classList.add('item-container');
+
+        const itemName = document.createElement('h3');
+        itemName.innerText = itemName;
+        itemContainer.appendChild(itemName);
+
+        if(item.imageUrl) {
+            const itemImage = document.createElement('img');
+            itemImage.src = item.imageUrl;
+            itemImage.alt = itemName;
+            itemContainer.appendChild(itemImage);
+        }
+
+        if(item.description) {
+            const itemDescription = document.createElement('p');
+            itemDescription.innerText = item.description;
+            itemDescription.appendChild(itemDescription);
+        }
+
+        if(item.cities) {
+            item.cities.forEach(city => {
+                const cityContainer = document.createElement('div');
+                cityContainer.classList.add('city-container');
+
+                const cityName =document.createElement('h4');
+                cityName.innerText = city.name;
+                cityContainer.appendChild(cityName);
+
+                const cityImage = document.createElement('img');
+                cityImage.src = city.imageUrl;
+                cityImage.alt = city.name;
+
+                const cityDescription = document.createElement('p');
+                cityDescription.innerText = city.description;
+                cityContainer.appendChild(cityDescription);
+
+                itemContainer.appendChild(cityContainer);
+            });
+        }
+    resultsContainer.appendChild(itemContainer);
     });
 }
 
-// reset input
-function resetSearch(){
-    const searchCountries= document.getElementById("searchCountries");
+function searchCountry() {
+    const searchInput = document.getElementById('searchCountries').value.toLowerCase();
+    console.log('You searched for: ', searchInput)
+    const results = [];
 
-    searchCountries.valueOf="";
+    Object.keys(travelData).forEach(category => {
+        travelData[category].forEach(item => {
+            let isMatch = item.name.toLowerCase().includes(searchInput) || (item.description && item.description.toLowerCase().includes(searchInput));
+            if(item.cities && !isMatch) {
+                const matchingCities = item.cities.filter(city => city.name.toLowerCase().includes(searchInput) || city.description.toLowerCase().includes(searchInput));
+                if (matchingCities.length > 0) {
+                    isMatch = true;
+                    item = { ...item, cities:matchingCities };
+                }
+            }
+            if(isMatch) {
+                results.push(item);
+            }
+        });
+    });
+    console.log('Results:', results)
+    displayContainer(results);
+}
+
+function resetSearch() {
+    document.getElementById('searchCountries').value = '';
+    document.getElementById('results').querySelector('ul').innerHTML= '';
 }
