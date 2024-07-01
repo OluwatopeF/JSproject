@@ -14,6 +14,22 @@ let travelData = {};
     })
     .catch(error => console.error('Error: ', error));
 
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchCountries');
+    const resultsContainer = document.getElementById('results');
+    
+    searchInput.addEventListener('input', (event) => {
+        const value = event.target.value.trim();
+        if (value) {
+        resultsContainer.style.display = 'block';
+        searchCountry();
+        } else {
+        resultsContainer.style.display = 'none';
+        resetSearch();
+        }
+    });
+    });
+
 
 function displayContainer(bar){
     const resultsContainer = document.getElementById('results').querySelector('ul');
