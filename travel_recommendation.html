@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "travel.css">
+    <title>Travel Recommendation</title>
+</head>
+<body>
+    <!-- navbar -->
+    <header>
+    <nav class = "navbar">
+        <li><h1>Travel</h1></li>
+        <li><a href = "./travel_recommendation.html">Home</a></li>
+        <li><a href = "./pages/about.html">About us</a></li>
+        <li><a href = "./pages/contact.html">Contact Us</a></li>
+
+        <!-- searchbar -->
+        <li><input type="text" id="searchCountries" class = "bar_one" placeholder="Enter a destination or keyword"> </li>
+        <div class = "btnBox">
+            <li><button onclick="searchCountry()">Search</button></li>
+            <li><button onclick="resetSearch()">Clear</button></li> 
+        </div>
+          
+    </nav>     
+</header>
+
+<!-- search results show here -->
+    <div id = "results">
+        <ul></ul>
+    </div>
+
+
+<!-- body -->
+ <section class ="intro">
+    <div class = "sideSocial">
+        <div class = "sideSocial-fb"></div>
+        <div class = "sideSocial-tw"></div>
+        <div class = "sideSocial-ig"></div>
+        <div class = "sideSocial-yt"></div>
+     </div>
+    
+     <div class = "mainTitle">
+        <h1>Travel</h1>
+     </div>
+ </section>
+ <div class = "subTitle">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae iste adipisci quod alias, dolorem architecto nostrum assumenda vitae facilis atque voluptas harum deserunt reiciendis, error temporibus beatae ipsum veritatis aliquid?</p>
+ </div>
+
+ <div class = "bookNow">
+    <button>Book Now</button>
+ </div>
+
+
+    <script src = "./travel_recommendation.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Book Now */
+.bookNow{
+    width: 300px;
+    padding-left: 200px;
+    margin: 20px;
+    height: 100px;
+    align-content: center;
+}
+.bookNow button{
+    color: white;
+    background: black;
+    width: 135px;
+    height: 45px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.bookNow button:hover{
+    transition-duration: 0.8s;
+    color:black;
+    background: white;
+    cursor: pointer;
+}
+
+
+header{
+    display: flex;
+    background-color: darkseagreen;
+}
+
+/* main body */
+body{
+    background:url(./img/1431632.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+/* Navbar */
+.navbar{
+    display: flex;
+    list-style: none;
+    width:500px; 
+}
+
+.navbar li{
+    margin: 15px;
+    padding: 5px;
+}
+
+.navbar li a{
+    text-decoration: none;
+    color: black;
+    float: left;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.navbar li a:hover{
+    transition-duration: 0.8s;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+}
+
+/* searchbar */
+.navbar .bar_one{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    width: 350px;
+    position: absolute;
+    right: 163px;
+}
+
+.navbar .btnBox{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: black; */
+    position: absolute;
+    right: 61px;
+    width: 200px;
+    top: 26px;
+}
+
+.navbar .btnBox button{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    width: 60px;
+}
+
+
+#results{
+    background-color: aqua;
+    width: 360px;
+    position: absolute;
+    right: 185px;
+    top: 75px;
+    display: none;
+    list-style: none;
+}
+
+#results .city-container img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+#results .item-container img {
+    max-width: 100%;
+    height: auto;
+  }
+
+/* section */
+.intro{
+    display: flex;
+}
+
+/* social bar */
+.sideSocial{
+    background-color: rgb(98, 137, 245, 0.3);
+    width:36px;
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.sideSocial-fb{
+    width: 35px;
+    height: 35px;
+    background-image: url("./img/logo-facebook-png-46264.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.sideSocial-tw{
+    width: 35px;
+    height: 35px;
+    background-image: url("./img/twitter-icon-83.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sideSocial-ig{
+    width: 35px;
+    height: 35px;
+    background-image: url("./img/instagram-icon-971.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sideSocial-yt{
+    width: 35px;
+    height: 35px;
+    background-image: url("./img/youtube-logo-png-3566.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.mainTitle{
+    display: block;
+    width:300px;
+    height: fit-content;
+    position: relative;
+    left: 163px;
+}
+.mainTitle h1{
+    font-size: 50px;
+}
+
+.subTitle{
+    width: 500px;
+    display: flex;
+    background-color: rgba(0, 255, 255, 0.3);
+
+    position: relative;
+    left: 200px;
+    height: 250px;
+}
+
+/* About Us */
+.aboutUs{
+    background-color: rgb(128, 128, 128, 0.3);
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 208px;
+    display: flex;
+}
+
+/* contact us */
+.contactUs{
+
+    width: 670px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 255, 255, 0.4);
+    position: fixed;
+    left: 675px;
+    height: 570px;
+    
+}
+.contactUs .contactInput{
+    background-color: rgba(225,255,255,0.1);
+}
+.contactUs .messageBox{
+    height: 200px;
+    background-color: rgba(225,255,255,0.1);
+}
+
+.contactUs button{
+    width: 100%;
+    height: 30px;
+    color: white;
+    background-color: darkseagreen;
+    font-size: 20px;
+    font-weight: bolder;
+}
