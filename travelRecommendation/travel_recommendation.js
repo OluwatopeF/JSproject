@@ -53,7 +53,7 @@ function displayContainer(bar){
         if(item.description) {
             const itemDescription = document.createElement('p');
             itemDescription.innerText = item.description;
-            itemDescription.appendChild(itemDescription);
+            itemContainer.appendChild(itemDescription);
         }
 
         if(item.cities) {
@@ -65,9 +65,12 @@ function displayContainer(bar){
                 cityName.innerText = city.name;
                 cityContainer.appendChild(cityName);
 
-                const cityImage = document.createElement('img');
-                cityImage.src = city.imageUrl;
-                cityImage.alt = city.name;
+                if (city.imageUrl) {
+                    const cityImage = document.createElement('img');
+                    cityImage.src = city.imageUrl;
+                    cityImage.alt = city.name;
+                    cityContainer.appendChild(cityImage);
+                    }
 
                 const cityDescription = document.createElement('p');
                 cityDescription.innerText = city.description;
