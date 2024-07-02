@@ -40,13 +40,13 @@ function displayContainer(bar){
         itemContainer.classList.add('item-container');
 
         const itemName = document.createElement('h3');
-        itemName.innerText = itemName;
+        itemName.innerText = item.name;
         itemContainer.appendChild(itemName);
 
         if(item.imageUrl) {
             const itemImage = document.createElement('img');
             itemImage.src = item.imageUrl;
-            itemImage.alt = itemName;
+            itemImage.alt = item.name;
             itemContainer.appendChild(itemImage);
         }
 
