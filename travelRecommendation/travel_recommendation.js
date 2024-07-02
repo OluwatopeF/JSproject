@@ -111,3 +111,18 @@ function resetSearch() {
     document.getElementById('searchCountries').value = '';
     document.getElementById('results').querySelector('ul').innerHTML= '';
 }
+
+const submitButton = document.getElementById('submitMessage');
+if (submitButton) {
+    submitButton.addEventListener('click', () => {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        console.log('Name:', name);
+        console.log('Email:', email);
+        console.log('Message:', message);
+
+        alert('Your message has been sent');
+    });
+}
