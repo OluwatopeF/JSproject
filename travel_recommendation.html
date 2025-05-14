@@ -16,28 +16,30 @@
         <li><a href = "./pages/contact.html">Contact Us</a></li>
 
         <!-- searchbar -->
-        <li><input type="text" id="searchCountries" class = "bar_one" placeholder="Enter a destination or keyword"> </li>
+        <li><input type="text" id="searchCountries" class = "bar_one" placeholder="Enter a destination or keyword"> 
+            <!-- search results show here -->
+            <div id = "results">
+                <ul></ul>
+            </div>
+        </li>
+
         <div class = "btnBox">
-            <li><button onclick="searchCountry()">Search</button></li>
+            <!-- Search btn not needed -->
+            <!-- <li><button onclick="searchCountry()">Search</button></li> -->
             <li><button onclick="resetSearch()">Clear</button></li> 
         </div>
           
     </nav>     
 </header>
 
-<!-- search results show here -->
-    <div id = "results">
-        <ul></ul>
-    </div>
-
 
 <!-- body -->
  <section class ="intro">
     <div class = "sideSocial">
-        <div class = "sideSocial-fb"></div>
-        <div class = "sideSocial-tw"></div>
-        <div class = "sideSocial-ig"></div>
-        <div class = "sideSocial-yt"></div>
+        <div class = "sideSocial-fb" onclick="ToFacebook()" ></div>
+        <div class = "sideSocial-tw" onclick="ToTwitter()"></div>
+        <div class = "sideSocial-ig" onclick="ToInsta()"></div>
+        <div class = "sideSocial-yt" onclick="ToYoutube()"></div>
      </div>
     
      <div class = "mainTitle">

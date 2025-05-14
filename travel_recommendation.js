@@ -126,3 +126,27 @@ if (submitButton) {
         alert('Your message has been sent');
     });
 }
+
+function ToFacebook(){
+    window.open(
+        "https://www.facebook.com", "_blank"
+    );
+}
+
+function ToTwitter(){
+    window.open(
+        "https://www.twitter.com", "_blank"
+    );
+}
+
+function ToInsta(){
+    window.open(
+        "https://www.instagram.com", "_blank"
+    );
+}
+
+function ToYoutube(){
+    window.open(
+        "https://www.youtube.com", "_blank"
+    );
+}

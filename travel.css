@@ -30,6 +30,7 @@
 header{
     display: flex;
     background-color: darkseagreen;
+    width: 100%;
 }
 
 /* main body */
@@ -45,7 +46,9 @@ body{
 .navbar{
     display: flex;
     list-style: none;
-    width:500px; 
+    width:100%; 
+    flex-direction: row;
+    
 }
 
 .navbar li{
@@ -60,6 +63,7 @@ body{
     margin-top: 20px;
     border-radius: 5px;
     text-align: center;
+    width: 100px;
 }
 
 .navbar li a:hover{
@@ -74,18 +78,15 @@ body{
     margin: 10px;
     border-radius: 20px;
     width: 350px;
-    position: absolute;
-    right: 163px;
+    margin-left: 800px;
+
 }
 
 .navbar .btnBox{
     display: flex;
     justify-content: space-between;
-    /* background-color: black; */
-    position: absolute;
-    right: 61px;
     width: 200px;
-    top: 26px;
+    align-self: center;
 }
 
 .navbar .btnBox button{
@@ -100,10 +101,10 @@ body{
     background-color: aqua;
     width: 360px;
     position: absolute;
-    right: 185px;
-    top: 75px;
+    z-index: 1;
     display: none;
     list-style: none;
+    right: 8.5%;
 }
 
 #results .city-container img {
@@ -224,4 +225,9 @@ body{
     background-color: darkseagreen;
     font-size: 20px;
     font-weight: bolder;
+}
+
+
+@media screen {
+    
 }
